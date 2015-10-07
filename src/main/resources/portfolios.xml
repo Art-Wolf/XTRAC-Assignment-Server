@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<portfolios>
+    <customer>
+        <account>Y1000000</account>
+        <fname>John</fname>
+        <lname>Doe</lname>
+        <address>245 Summer St.</address>
+        <postal>02210</postal>
+        <state>MA</state>
+        <portfolio>
+            <position>
+                <symbol>APPL</symbol>
+                <quantity>10</quantity>
+            </position>
+            <position>
+                <symbol>IBM</symbol>
+                <quantity>5</quantity>
+            </position>
+        </portfolio>
+    </customer>
+    <customer>
+        <account>Y2000000</account>
+        <fname>Jane</fname>
+        <lname>Doe</lname>
+        <address>200 Seaport Blvd</address>
+        <postal>02210</postal>
+        <state>MA</state>
+        <portfolio>
+            <position>
+                <symbol>FB</symbol>
+                <quantity>14</quantity>
+            </position>
+            <position>
+                <symbol>TWTR</symbol>
+                <quantity>30</quantity>
+            </position>
+        </portfolio>
+    </customer>
+</portfolios>
