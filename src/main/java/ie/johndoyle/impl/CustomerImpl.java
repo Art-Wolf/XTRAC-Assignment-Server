@@ -18,6 +18,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.concurrent.atomic.AtomicLong;
 
+import org.springframework.stereotype.Service;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
@@ -25,10 +26,8 @@ import org.w3c.dom.NodeList;
 /**
  * Created by johnc on 10/6/2015.
  */
+@Service
 public class CustomerImpl implements CustomerDAO {
-
-    @Autowired
-    private ItemDAO itemDAO;
 
     private XMLParserImpl xmlParser = new XMLParserImpl();
 
@@ -39,7 +38,7 @@ public class CustomerImpl implements CustomerDAO {
     public CustomerImpl() {
         super();
 
-        Document dom = xmlParser.parseXMLFile();
+        dom = xmlParser.parseXMLFile();
         List<Customer> documentList = xmlParser.parseCustomerDocument(dom);
 
         Iterator<Customer> customerIterator = documentList.iterator();

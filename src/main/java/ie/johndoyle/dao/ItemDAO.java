@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface ItemDAO {
 
-    public void add(Item item);
+    void add(Item item);
 
-    public List<Item> getAll(String account);
+    List<Item> getAll(String account);
 }

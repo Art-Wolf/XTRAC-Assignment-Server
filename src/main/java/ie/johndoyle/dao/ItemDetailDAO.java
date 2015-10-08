@@ -9,6 +9,6 @@ import java.util.List;
  */
 public interface ItemDetailDAO {
 
-    public ItemDetail get(String symbol);
+    ItemDetail get(String symbol);
 
 }

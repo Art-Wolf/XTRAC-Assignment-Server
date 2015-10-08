@@ -9,7 +9,7 @@ import java.util.List;
  */
 public interface CustomerDAO {
 
-    public void add(Customer customer);
+    void add(Customer customer);
 
-    public List<Customer> getAll();
+    List<Customer> getAll();
 }
