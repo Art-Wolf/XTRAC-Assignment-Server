@@ -43,9 +43,7 @@ public class ItemImpl implements ItemDAO {
         List<Item> returnList = new ArrayList<Item>();
 
         for (Item item : itemList) {
-            log.debug("Account: " + item.getAccount());
             if (item.getAccount().compareTo(account) == 0) {
-                log.debug("MATCH!");
                 returnList.add(item);
             }
         }

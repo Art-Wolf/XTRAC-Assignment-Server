@@ -89,16 +89,16 @@ public class XMLParserImpl {
 
         String account = getValue(element, "account");
 
-        NodeList portfolio = element.getElementsByTagName("posityion");
-        if(portfolio != null && portfolio.getLength() > 0) {
-            for(int i = 0 ; i < portfolio.getLength();i++) {
-                Element position = (Element) portfolio.item(i);
-                NodeList positionList = position.getElementsByTagName("position");
+        //NodeList portfolio = element.getElementsByTagName("portfolio");
+        //if(portfolio != null && portfolio.getLength() > 0) {
+        //    for(int i = 0 ; i < portfolio.getLength();i++) {
+        //        Element position = (Element) portfolio.item(i);
+                NodeList positionList = element.getElementsByTagName("position");
                 if(positionList != null && positionList.getLength() > 0) {
                     for(int u = 0 ; u < positionList.getLength();u++) {
                         Element positionElement = (Element) positionList.item(u);
                         String symbol = getValue(positionElement, "symbol");
-                        Long quantity = Long.getLong(getValue(positionElement, "quantity"));
+                        long quantity = Long.parseLong(getValue(positionElement, "quantity"));
                         Item item = new Item(counter.incrementAndGet(),
                                 account,
                                 symbol,
@@ -106,8 +106,8 @@ public class XMLParserImpl {
                         );
                         itemList.add(item);
                     }}
-            }
-        }
+            //}
+        //}
 
         return itemList;
     }

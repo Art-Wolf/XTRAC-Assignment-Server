@@ -36,4 +36,22 @@
             </position>
         </portfolio>
     </customer>
+    <customer>
+        <account>Y1000000</account>
+        <fname>John</fname>
+        <lname>Duplicate</lname>
+        <address>245 Summer St.</address>
+        <postal>02210</postal>
+        <state>MA</state>
+        <portfolio>
+            <position>
+                <symbol>DOX</symbol>
+                <quantity>10</quantity>
+            </position>
+            <position>
+                <symbol>IBM</symbol>
+                <quantity>5</quantity>
+            </position>
+        </portfolio>
+    </customer>
 </portfolios>
