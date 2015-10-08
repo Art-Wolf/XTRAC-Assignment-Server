@@ -3,22 +3,14 @@ package ie.johndoyle.controller;
 import ie.johndoyle.Config;
 import ie.johndoyle.dao.CustomerDAO;
 import ie.johndoyle.entity.Customer;
-import ie.johndoyle.impl.CustomerImpl;
 import junit.framework.TestCase;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.InjectMocks;
-import org.mockito.Mock;
-import org.mockito.runners.MockitoJUnitRunner;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Configurable;
-import org.springframework.boot.test.SpringApplicationConfiguration;
-import org.springframework.context.annotation.ComponentScan;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.junit.Assert;
-import org.springframework.test.context.web.WebAppConfiguration;
 
 /**
  * Created by johnc on 10/7/2015.

@@ -33,7 +33,7 @@ public class CustomerController {
     public Object[] getCustomer(@RequestParam(value = "account", defaultValue = "") String account) {
         Object[] customerList = customerDAO.getAll().toArray();
 
-        if (account != null) {
+        if (account.compareTo("") != 0) {
             Object[] individual = new Object[1];
 
             for (Object objCustomer : customerList) {

@@ -20,8 +20,14 @@ public class ItemController {
     @Autowired
     private ItemDAO itemDAO;
 
+    public ItemController() {}
+
+    public ItemController(ItemDAO itemDAO) {
+        this.itemDAO = itemDAO;
+    }
+
     @RequestMapping("/item")
-    public Object[] getItem(@RequestParam(value="account", defaultValue="Y1000000") String account
+    public Object[] getItem(@RequestParam(value="account", defaultValue="") String account
     ) {
         return itemDAO.getAll(account).toArray();
     }

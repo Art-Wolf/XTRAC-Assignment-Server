@@ -19,8 +19,14 @@ public class ItemDetailController {
     @Autowired
     private ItemDetailDAO itemDetailDAO;
 
+    public ItemDetailController() {}
+
+    public ItemDetailController(ItemDetailDAO itemDetailDAO) {
+        this.itemDetailDAO = itemDetailDAO;
+    }
+
     @RequestMapping("/itemdetail")
-    public ItemDetail[] getItemDetail(@RequestParam(value="symbol", defaultValue="APPL") String symbol
+    public ItemDetail[] getItemDetail(@RequestParam(value="symbol", defaultValue="") String symbol
     ) {
         ItemDetail [] itemDetails = new ItemDetail[1];
 
